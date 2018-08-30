@@ -25,6 +25,18 @@ open it up again and be just where you stopped before.
 By default OpenRefine is saving your project continuously. If you close OpenRefine and open it up again,
 you'll see a list of your projects. You can click on any one of them to open it up again.
 
+### Extracting or Applying Your Cleaning Process
+
+OpenRefine keeps track of all the operations you perform within a particular project. If you know that you're going to be repeating the same process of cleaning or transforming your data on similar files, you can save time by extracting the sequence of commands/transformations, and applying it to successive files. 
+
+This functionality can be especially useful if you're trimming white space or reformatting dates. Be careful, though -- in order for this to be beneficial, your documents need to have the same column names in order for OpenRefine to apply your commands successfully.
+
+1. To get a recprd of your operations, in the top left, select the Undo/Redo tab, and then select 'Extract'.
+2. Look over the list of operations that were performed on your file. De-select any that you don't want to apply to other files you plan to clean with OpenRefine.
+3. The operations will appear pre-selected in a pop-up window, formatted as JSON. Paste them into a separate document (either JSON or a txt file), and save them with an appropriately descriptive filename. 
+4. When you create a new project in OpenRefine with a document that you want to re-use your cleaning process on, select the Undo/Redo tab, and then select 'Apply'. Paste the JSON code that you saved earlier into the pop-up window.
+5. Click 'Perform Operations'. All the transformations from your earlier file will be applied.
+
 ### Exporting
 
 You can also export a project. This is helpful, for instance, if you wanted to send your raw data and cleaning steps to a collaborator, 
